@@ -4,10 +4,10 @@
 require(["jquery"], function ($) {
     //
 
-    var page ={
+    var home ={
         init:function () {
-          page.navBackground();
-          page.bannerMove();
+          home.navBackground();
+          home.bannerMove();
         },
         navBackground:function () {
             //控制导航栏背景颜色和背景图片
@@ -124,7 +124,8 @@ require(["jquery"], function ($) {
 
         //
         }
-    return page.init();
+    return home.init();
+    // home.init();
     //
     }
 );
