@@ -32,6 +32,10 @@ header nav ul li{
     text-align: center;
     /*cursor: pointer;*/
 }
+#welcome{
+    color: blue;
+    text-decoration: underline;
+}
 header nav ul li:first-child{
     letter-spacing:10px;
 }
@@ -81,6 +85,8 @@ header nav ul li:nth-child(0){
     width: 1190px;
     margin: 0 auto;
 }
+
+/*儒雅中式*/
 .floor{
     height: 832px;
     overflow: hidden;
@@ -168,4 +174,19 @@ header nav ul li:nth-child(0){
 }
 .f1{
     margin-left: 0;
+}
+.fashionModern h2{
+    background: url("../../resources/nav-li-bg/modern.png");
+}
+.frish h2{
+    background: url("../../resources/nav-li-bg/Mediterranean.png");
+}
+.luxurious h2{
+    background: url("../../resources/nav-li-bg/european.png");
+}
+.honourable h2{
+    background: url("../../resources/nav-li-bg/american.png");
+}
+.countryside h2{
+    background: url("../../resources/nav-li-bg/pastoral.png");
 }

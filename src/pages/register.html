@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册页面</title>
+	<link rel="stylesheet" href="../style/_reset.css">
+    <link rel="stylesheet" href="../style/register.css">
+</head>
+<body>
+	<img src="../../resources/logo.png">
+	<p class="userRegister">用户注册</p>
+	  <div class="register">
+		<label for="userId">帐户名：</label>
+		<input type="text" id="userId" name="user_id"><br/>
+		<label for="userPassword">账户密码：</label>
+		<input type="password" id="userPassword"><br/>
+		<label for="userAddress">账户地址：</label>
+		<input type="text" id="userAddress"><br/>
+		<label for="userCard">身份证号码：</label>
+		<input type="text" id="userCard" onkeyup="value=value.replace(/[^\d]/g,'')"/><br/>
+		<label for="userTel">手机号码：</label>
+		<input type="text" id="userTel" onkeyup="value=value.replace(/[^\d]/g,'')"/><br/>
+		<label for="userEmail">邮箱地址：</label>
+		<input type="text" id="userEmail"></br>
+		<div class="sexbox">
+			<label for="userSex"></label>
+			<input class="sex" type="radio" value="男" name="userSex">男
+			<input class="sex" type="radio" value="女" name="userSex">女<Br />
+		</div>
+		<!--<input class="agree" type="checkbox" name="">-->
+		<!--<div class="agreement">-->
+			<!--请阅读<a href="#">《三牛家居用户注册协议》</a>	-->
+		<!--</div>-->
+		<input id="J-registerButton"class="registerButton" type="submit" name="submit" value="注  册">
+		<p class="sign"><a href="sign.html">登 陆>></a></p>
+	</div>
+	<div class="tanchuang-mask" id="tanchuang-mask">
+		<div class="tanchuang">
+			<h1>注册成功</h1>
+			<button>登陆</button>
+		</div>
+	</div>
+</body>
+<script src="../tools/require.js" data-main="../tools/requiremain.js"></script>
+<script type="text/javascript" src="../script/register.js"></script>
+</html>

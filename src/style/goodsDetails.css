@@ -166,3 +166,27 @@ header nav ul li:nth-child(0){
     text-align: center;
     display: inline-block;
 }
+.shoppingCart{
+    width:180px;
+    height:45px;
+    background:red;
+    float:left;
+    text-align:center;
+    font-size:18px;
+    color:white;
+    line-height:45px;
+    margin-top:44px;
+}
+.payof{
+    width:180px;
+    height:45px;
+    line-height:45px;
+    text-align:center;
+    float:left;
+    font-size:18px;
+    color:red;
+    background:white;
+    border:1px solid red;
+    margin-top:44px;
+    margin-left:60px;
+}

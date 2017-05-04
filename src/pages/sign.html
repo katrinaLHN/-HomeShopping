@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+    <link rel="stylesheet" href="../style/_reset.css">
+    <link rel="stylesheet" href="../style/sign.css">
+</head>
+<body>
+<img src="../../resources/logo.png">
+<p class="userSign">用户登录</p>
+<div class="sign">
+    <div class="user">
+        <label><img src="../../resources/sign-user.png"></label>
+        <input type="text" placeholder="用户名" id="userName">
+    </div>
+    <div class="passWord">
+        <label><img src="../../resources/sign-password.png"></label>
+        <input type="password" placeholder="密码" id="userPassword">
+    </div>
+    <!--<div class="automaticLogon">-->
+    <!--<input class="agree" type="checkbox" name="">-->
+    <!--<p>自动登陆</p> -->
+    <!--</div>-->
+    <input class="signButton" type="submit" value="登陆" id="J-signButton"><br/>
+    <p class="register"><a href="register.html">注册</a></p>
+    <p class="forgetPassword">忘记密码?</p>
+</div>
+<div class="tanchuang-mask" id="tanchuang-mask">
+    <div class="tanchuang">
+        <h1>登陆成功</h1>
+        <button>确定</button>
+    </div>
+</div>
+</body>
+<script src="../tools/require.js" data-main="../tools/requiremain.js"></script>
+<script type="text/javascript" src="../script/sign.js"></script>
+</html>

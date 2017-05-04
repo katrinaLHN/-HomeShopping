@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车页面</title>
+	<link rel="stylesheet" href="../style/_reset.css">
+    <link rel="stylesheet" href="../style/shoppingCart.css">
+</head>
+<body>
+	<img src="../../resources/logo.png">
+	<p class="myCar">我的购物车</p>
+	<div class="mainBody">
+		<ul class="navList">
+			<li>
+				<input type="checkbox" class="allTop">
+				全选
+			</li>
+			<li class="goods">商品</li>
+			<li>单价</li>
+			<li>数量</li>
+			<li>金额</li>
+			<li>操作</li>
+		</ul>
+		<ul class="goodsList">
+			<li class="goodsLi">
+				<input type="checkbox" style="float:left;margin-top:30px;" class="checkSon">
+				<a class="goodsIco" href="#"><img src="../../resources/goods-img/t6.jpg"></a>
+				<p class="goodsName">[韩菲尔]韩式田园 人气精品 优质实木框架 象牙白平开式2.0米四门衣柜</p>
+				<p class="price">￥22250</p>
+				<div class="count">
+					<a href="javascript:;"><img src="../../resources/down.png" class="reduce"></a>
+					<input type="text" value="1" class="countNumber">
+					<a href="javascript:;"><img src="../../resources/up.png" class="add"></a>
+				</div>
+				<p class="allMoney">￥22250</p>
+				<a href="javascript:;" class="delete">删除</a>
+			</li>
+			<li class="goodsLi">
+				<input type="checkbox" style="float:left;margin-top:30px;" class="checkSon">
+				<a class="goodsIco" href="#"><img src="../../resources/goods-img/t6.jpg"></a>
+				<p class="goodsName">[韩菲尔]韩式田园 人气精品 优质实木框架 象牙白平开式2.0米四门衣柜</p>
+				<p class="price">￥22250</p>
+				<div class="count">
+					<a href="javascript:;"><img src="../../resources/down.png" class="reduce"></a>
+					<input type="text" value="1" class="countNumber">
+					<a href="javascript:;"><img src="../../resources/up.png" class="add"></a>
+				</div>
+				<p class="allMoney">￥22250</p>
+				<a href="javascript:;" class="delete">删除</a>
+			</li>
+			<li class="goodsLi">
+				<input type="checkbox" style="float:left;margin-top:30px;" class="checkSon">
+				<a class="goodsIco" href="#"><img src="../../resources/goods-img/t6.jpg"></a>
+				<p class="goodsName">[韩菲尔]韩式田园 人气精品 优质实木框架 象牙白平开式2.0米四门衣柜</p>
+				<p class="price">￥22250</p>
+				<div class="count">
+					<a href="javascript:;"><img src="../../resources/down.png" class="reduce"></a>
+					<input type="text" value="1" class="countNumber">
+					<a href="javascript:;"><img src="../../resources/up.png" class="add"></a>
+				</div>
+				<p class="allMoney">￥22250</p>
+				<a href="javascript:;" class="delete">删除</a>
+			</li>
+		</ul>
+		<ul class="LastBalance">
+			<li>
+				<input type="checkbox" class="allTop">
+				全选
+			</li>
+			<li class="deleteGoods">删除选中商品</li>
+			<li class="yuan">总金额：<span style="color:#de500a;">￥22250</span></li>
+		</ul>
+		<div class="goAccount">去结算></div>
+		<div class="continueShopping"><继续购物</div>
+	</div>
+</body>
+<script src="../tools/jquery-3.1.1.min.js"></script>
+<script src="../script/shoppingCart.js"></script>
+</html>
