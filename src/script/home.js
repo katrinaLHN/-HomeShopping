@@ -6,7 +6,7 @@ require(["jquery"], function ($) {
                 home.navBackground();
                 home.bannerMove();
                 home.welcomeUser();
-                home.getInf();
+                home.getType();
                 // console.log(sessionStorage.username);
             },
             navBackground: function () {
@@ -123,23 +123,57 @@ require(["jquery"], function ($) {
                 }
             },
             welcomeUser: function () {
-                var username = "欢迎，" + sessionStorage.username
-                $('#welcome').text(username);
+                if (sessionStorage.username) {
+                    var username = "欢迎，" + sessionStorage.username;
+                    $('#welcome').text(username);
+                } else {
+                    $('#welcome').text('');
+                    $('#welcome').append("<a href='sign.html'>请登录</a>");
+                }
+
             },
-            getInf: function () {
-                $.post("/index/get_chinese",
+            getType: function () {
+                home.getInf('chinese', 'chinese');
+                home.getInf('fashion', 'fashionModern');
+                home.getInf('medit', 'frish');
+                home.getInf('european', 'luxurious');
+                home.getInf('america', 'honourable');
+                home.getInf('postal', 'countryside');
+            },
+            getInf: function (address, type) {
+                $.post("/index/get_" + address,
                     function (data, status) {
                         if (status == 'success') {
-                            console.log(data);
                             var data = JSON.parse(data);
-
                             console.log(data);
+                            home.addInfo(data, type);
                         } else {
                             alert('服务器连接失败！');
                         }
                     });
+            },
+            handleImgPath: function (path) {
+                if (path.endsWith(".jpg")) {
+                    return 'http://119.29.102.247:8089/picture/' + path
+                } else {
+                    return 'http://119.29.102.247:8089/picture/' + path + '.jpg';
+                }
+            },
+            addInfo: function (data, type) {
+                var listName = '.' + type + ' .goods-list';
+                var $aGoodsList = $(listName);
+                for (var i = 0; i < data.length; i++) {
+                    var picPath = home.handleImgPath(data[i].picture_path);
+                    var goodsList = "." + type + " .goods-list:eq(" + i + ")";
+                    $(goodsList).find("li.name").text(data[i].furniture_name);
+                    $(goodsList).find("li.tips").text(data[i].furniture_describe);
+                    $(goodsList).find("li.price").text(data[i].furniture_price);
+                    $(goodsList).find("img").attr('src', picPath);
+                    $(goodsList).find("a").attr('target', '_blank');
+                    // $(goodsList).find("a").attr('href','/index/get_furniture_describe?id=32842e2d-db42-430e-af6a-702d941d907a')
+                    $(goodsList).find("a").attr('href', 'goodsDetails.html?' + data[i].furniture_id);
+                }
             }
-            //
         }
         return home.init();
         // home.init();
